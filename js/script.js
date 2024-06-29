@@ -76,3 +76,16 @@ function sendEmail() {
         }
     ).catch(err => console.log(err),alert(err));
 }
+
+// JavaScript to check if the device is mobile
+function isMobileDevice() {
+  return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+}
+
+// Execute function to hide image if on mobile
+window.onload = function() {
+  if (isMobileDevice()) {
+    document.getElementById('personImage').style.display = 'none';
+  }
+};
+
